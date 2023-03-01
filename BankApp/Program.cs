@@ -6,6 +6,7 @@
 		static void Main(string[] args)
 		{
 
+			System.Console.WriteLine(users);
 			Start();
 		}
 		static void Start()
@@ -24,19 +25,14 @@
 				switch (choice)
 				{
 					case "1":
-						users.Add(new User(username, password));
+						User? new_user = new User(username, password);
+						users.Add(new_user);
+						new_user.Save();
 						Console.WriteLine("User created successfully!");
 						break;
 					case "2":
-						User? new_user = users.Find(u => u.Username == username && u.Password == password);
-						if (new_user == null)
-						{
-							Console.WriteLine("Incorrect username or password. Please try again.");
-						}
-						else
-						{
-							Console.WriteLine($"Welcome, {new_user.Username}!");
-						}
+						User return_user = new User(username, password);
+						return_user.Login();
 						break;
 					case "3":
 						break;
