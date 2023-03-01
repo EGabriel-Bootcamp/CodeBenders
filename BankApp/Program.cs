@@ -25,14 +25,34 @@
 				switch (choice)
 				{
 					case "1":
-						User? new_user = new User(username, password);
+						User new_user = new User(username, password);
 						users.Add(new_user);
 						new_user.Save();
 						Console.WriteLine("User created successfully!");
 						break;
 					case "2":
 						User return_user = new User(username, password);
-						return_user.Login();
+						string[]? userBack = return_user.Login();
+						System.Console.WriteLine("Your account balance is # {0}", userBack.GetValue(2));
+
+						System.Console.WriteLine("For Deposit press (1)\nfor Withdrawal press (2)\npress (3) to exit");
+						string? login_choice = Console.ReadLine();
+						switch (login_choice)
+						{
+							case "1":
+								System.Console.WriteLine("How much would you like to Deposit?");
+								int amount;
+								int.TryParse(Console.ReadLine(), out amount);
+								return_user.Deposit(amount);
+								break;
+							case "2":
+								System.Console.WriteLine("How much would you like to Withdraw?");
+								int.TryParse(Console.ReadLine(), out amount);
+								return_user.Withdraw(amount);
+								break;
+							default:
+								break;
+						}
 						break;
 					case "3":
 						break;
@@ -44,20 +64,7 @@
 				Console.WriteLine("Press\n1 to sign up,\n2 to sign in\n3 to exit:");
 				choice = Console.ReadLine();
 			}
-			// FindFiles("/home/imitor/Documents/git_repos/Practices/CodeBenders/BankApp");
+
 		}
-
-		// public static IEnumerable<string> FindFiles(string folderName)
-		// {
-		// 	List<string> files = new List<string>();
-		// 	var found = Directory.EnumerateFiles(folderName, "*", SearchOption.AllDirectories);
-		// 	foreach (var file in found)
-		// 	{
-		// 		files.Add(file);
-		// 		System.Console.WriteLine(file);
-		// 	}
-
-		// 	return files;
-		// }
 	}
 }
