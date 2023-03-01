@@ -16,7 +16,6 @@ namespace BankApp
 		{
 			string fileName = "./" + this.Username + ".txt";
 			// UserAccounts/
-			File.WriteAllText(fileName, this.Username);
 			File.WriteAllText(fileName, this.Password);
 		}
 		public void Login()
