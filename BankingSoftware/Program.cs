@@ -4,11 +4,13 @@ using BankingSoftware.Modules;
 
 namespace BankingSoftware;
 
-class Program
+internal class Program
 {
-    const string userStoragePath = @"C:\Users\rexxr\Documents\projectss\CodeBenders\BankingSoftware\Storage\Users\";
+    private const string userStoragePath =
+        @"C:\Users\rexxr\Documents\projectss\CodeBenders\BankingSoftware\Storage\Users\";
 
-    const string accountStoragePath = @"C:\Users\rexxr\Documents\projectss\CodeBenders\BankingSoftware\Storage\Accounts\";
+    private const string accountStoragePath =
+        @"C:\Users\rexxr\Documents\projectss\CodeBenders\BankingSoftware\Storage\Accounts\";
 
     public static void Auth(out string userLogin)
     {
@@ -28,6 +30,7 @@ class Program
             Console.Write(">>>>> ");
             loginSignup = int.Parse(Console.ReadLine());
         }
+
         switch (loginSignup)
         {
             case 1:
@@ -37,7 +40,6 @@ class Program
                 userLogin = SignupModule.Signup(userStoragePath);
                 SignupModule.CreateAccount(userLogin, accountStoragePath);
                 break;
-            
         }
 
         AddSymbol.AddBreakLine();
@@ -72,7 +74,7 @@ class Program
                 Console.WriteLine("Input the correct value");
                 break;
         }
-        
+
         Console.WriteLine("Do you want to perform another transaction");
         Console.WriteLine("............ Press 1 to continue");
         Console.WriteLine("............ Press 2 to quit");
@@ -85,29 +87,24 @@ class Program
             Console.Write(">>>>> ");
             anotherAction = int.Parse(Console.ReadLine());
         }
-        while (anotherAction == 1)
+
+        if (anotherAction == 1)
         {
             Account(in userLogin);
-            Console.Write(">>>>> ");
-            anotherAction = int.Parse(Console.ReadLine());
         }
-
-        if (anotherAction == 2)
+        else if(anotherAction == 2)
         {
             Console.WriteLine("Thank you for banking with us...");
             Console.WriteLine("Goodbye.");
         }
-        
+
         AddSymbol.AddBreakLines(symbol: "*");
     }
 
-    static void Main()
+    private static void Main()
     {
-        Console.WriteLine(userStoragePath);
-        Console.WriteLine(accountStoragePath);
-        
         Auth(out var userLogin);
-        
+
         Account(in userLogin);
     }
 }

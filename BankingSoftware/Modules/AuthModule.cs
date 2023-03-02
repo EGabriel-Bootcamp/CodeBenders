@@ -16,11 +16,11 @@ public static class AuthModule
         var password = Console.ReadLine();
         var hashedPassword = new Hash().HashValues(password.Split());
 
-        var userLogin = new Hash().HashValues(new string[] { username, hashedPassword });
+        var userLogin = new Hash().HashValues(new[] { username, hashedPassword });
         var hashedUsername = new Hash().HashValues(username.Split());
         var userExist = File.Exists(userStoragePath + hashedUsername + ".txt");
 
-        while(!userExist)
+        while (!userExist)
         {
             Console.WriteLine("Incorrect username or password, please try again");
             Console.Write("Please enter your username: ");
@@ -30,11 +30,11 @@ public static class AuthModule
             password = Console.ReadLine();
             hashedPassword = new Hash().HashValues(password.Split());
 
-            userLogin = new Hash().HashValues(new string[] { username, hashedPassword });
+            userLogin = new Hash().HashValues(new[] { username, hashedPassword });
             hashedUsername = new Hash().HashValues(username.Split());
             userExist = File.Exists(userStoragePath + hashedUsername + ".txt");
         }
-        
+
         Console.WriteLine("Welcome {0}", username);
 
         return userLogin;

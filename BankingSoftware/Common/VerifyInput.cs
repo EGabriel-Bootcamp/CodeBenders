@@ -19,16 +19,16 @@ public static partial class VerifyInput
                 char.IsSymbol(c);
                 char.IsPunctuation(c);
                 char.IsSeparator(c);
-                
+
                 return false;
             })
-            )
+        )
         {
             Console.WriteLine("Input must not contain any number or symbol");
             Console.Write("Please input new value: ");
             input = Console.ReadLine();
         }
-        
+
         Console.WriteLine("Input is valid");
         return input;
     }
@@ -43,7 +43,7 @@ public static partial class VerifyInput
                 char.IsLetter(c);
                 char.IsPunctuation(c);
                 char.IsSymbol(c);
-                
+
                 return false;
             })
         )
@@ -52,7 +52,7 @@ public static partial class VerifyInput
             Console.Write("Please input new value: ");
             stringNumber = Console.ReadLine();
         }
-        
+
         Console.WriteLine("Input is valid");
         return stringNumber;
     }
@@ -77,7 +77,7 @@ public static partial class VerifyInput
             Console.Write("Please input your value: ");
             number = int.Parse(Console.ReadLine());
         }
-        
+
         Console.WriteLine("Number is valid");
         return number;
     }
@@ -87,13 +87,13 @@ public static partial class VerifyInput
         while (
             string.IsNullOrEmpty(password)
             || string.IsNullOrWhiteSpace(password)
-            )
+        )
         {
             Console.WriteLine("Input must not contain any space");
             Console.Write("Please input new value: ");
             password = Console.ReadLine();
         }
-        
+
         Console.WriteLine("Password is valid");
         return password;
     }
@@ -109,21 +109,21 @@ public static partial class VerifyInput
             Console.Write("Please input new value: ");
             phoneNumber = Console.ReadLine();
         }
-        
+
         Console.WriteLine("Phone number is valid");
         return phoneNumber;
     }
 
     public static string VerifyEmail(string email)
     {
-        string regex = @"^[^@\s]+@[^@\s]+\.(com|net|org|gov)$";
-        
+        var regex = @"^[^@\s]+@[^@\s]+\.(com|net|org|gov)$";
+
         while (!Regex.IsMatch(email, regex, RegexOptions.IgnoreCase))
         {
             Console.Write("Input a valid email: ");
             email = Console.ReadLine();
         }
-        
+
         Console.WriteLine("Email is valid.");
         return email;
     }

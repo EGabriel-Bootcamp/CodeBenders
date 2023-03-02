@@ -9,8 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Storage\Accounts" />
-      <Folder Include="Storage\Users" />
+        <Folder Include="Storage\Accounts"/>
+        <Folder Include="Storage\Users"/>
     </ItemGroup>
 
 </Project>

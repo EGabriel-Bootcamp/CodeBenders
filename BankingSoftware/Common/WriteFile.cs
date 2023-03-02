@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using System.Linq;
 using System.Text;
 
 namespace BankingSoftware.Common;
@@ -16,10 +15,10 @@ public static class WriteFile
     public static void WriteLines(string[] linesTexts, string fileName)
     {
         using var fs = File.OpenWrite(fileName);
-        for (int i = 0; i < linesTexts.Length; i++)
+        for (var i = 0; i < linesTexts.Length; i++)
         {
-           byte[] info = new UTF8Encoding(true).GetBytes(linesTexts[i] + "\n");
-           fs.Write(info, 0, info.Length);
+            var info = new UTF8Encoding(true).GetBytes(linesTexts[i] + "\n");
+            fs.Write(info, 0, info.Length);
         }
     }
 }
