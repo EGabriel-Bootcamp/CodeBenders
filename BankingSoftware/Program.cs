@@ -8,9 +8,8 @@ class Program
 {
     const string userStoragePath = @"C:\Users\rexxr\Documents\projectss\CodeBenders\BankingSoftware\Storage\Users\";
 
-    const string accountStoragePath =
-        @"C:\Users\rexxr\Documents\projectss\CodeBenders\BankingSoftware\Storage\Accounts\";
-    
+    const string accountStoragePath = @"C:\Users\rexxr\Documents\projectss\CodeBenders\BankingSoftware\Storage\Accounts\";
+
     public static void Auth(out string userLogin)
     {
         userLogin = "";
@@ -104,6 +103,9 @@ class Program
 
     static void Main()
     {
+        Console.WriteLine(userStoragePath);
+        Console.WriteLine(accountStoragePath);
+        
         Auth(out var userLogin);
         
         Account(in userLogin);
