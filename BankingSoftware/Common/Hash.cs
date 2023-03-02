@@ -4,6 +4,7 @@ using System.Text;
 
 namespace BankingSoftware.Common;
 
+// to hash input values
 public class Hash
 {
     const int keySize = 16;

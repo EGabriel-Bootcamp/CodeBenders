@@ -4,6 +4,7 @@ using BankingSoftware.Common;
 
 namespace BankingSoftware.Modules;
 
+// Module to handle authentication
 public static class AuthModule
 {
     public static string SignIn(string userStoragePath)

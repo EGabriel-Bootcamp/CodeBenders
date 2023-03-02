@@ -4,6 +4,7 @@ using System.Text;
 
 namespace BankingSoftware.Common;
 
+// for writing to text files
 public static class WriteFile
 {
     public static void WriteLine(string lineText, string fileName)

@@ -4,6 +4,7 @@ using BankingSoftware.Common;
 
 namespace BankingSoftware.Modules;
 
+// Module to handle account operations
 public class AccountModule
 {
     private static string GetAccountFile(in string userLogin, string accountStoragePath)

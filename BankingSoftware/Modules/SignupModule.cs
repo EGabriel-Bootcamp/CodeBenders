@@ -5,6 +5,7 @@ using BankingSoftware.Common;
 
 namespace BankingSoftware.Modules;
 
+// Module to handle signin and creation of account
 public class SignupModule
 {
     //const string StoragePath = 

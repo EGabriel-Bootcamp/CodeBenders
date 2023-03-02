@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace BankingSoftware.Common;
 
+// verify input by user
 public static partial class VerifyInput
 {
     public static string VerifyForStringOnly(string input)
