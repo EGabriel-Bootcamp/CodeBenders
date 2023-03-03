@@ -1,0 +1,8 @@
+First Name: Ade
+Last Name: Bendel
+Email: ade@bendel.com
+Username: ade
+Age: 78
+Phone Number: 9834563247
+HashedPassword: D84BA9FED904447C1BE566032AF633CD
+
