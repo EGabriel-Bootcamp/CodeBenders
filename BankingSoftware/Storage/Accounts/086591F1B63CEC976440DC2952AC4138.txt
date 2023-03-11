@@ -1,0 +1,5 @@
+Last withdrawal amount: $0
+Last withdrawal time: 
+Last deposit amount: $0
+Last deposit time: 
+Total: $0

@@ -1,0 +1,8 @@
+First Name: Kunle
+Last Name: Afod
+Email: kunle@afod.com
+Username: kunle
+Age: 67
+Phone Number: 8734652345
+HashedPassword: F1A3AB9E8E8AB970167FEEE7A731F3E9
+

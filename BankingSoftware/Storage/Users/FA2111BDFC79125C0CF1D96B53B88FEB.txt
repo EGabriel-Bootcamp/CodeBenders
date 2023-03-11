@@ -1,0 +1,8 @@
+First Name: John
+Last Name: Camark
+Email: john@camark.com
+Username: john
+Age: 67
+Phone Number: 9834562346
+HashedPassword: E813ECD4F0196D88949044C1FA1B568D
+

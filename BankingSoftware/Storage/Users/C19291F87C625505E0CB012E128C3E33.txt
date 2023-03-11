@@ -1,0 +1,8 @@
+First Name: Hal
+Last Name: Finley
+Email: hal@finley.com
+Username: hal
+Age: 87
+Phone Number: 9874523876
+HashedPassword: 8E3F0695D2604D26F5B64C23C485E3BF
+

@@ -1,0 +1,8 @@
+First Name: Usher
+Last Name: Ray
+Email: usher@ray.com
+Username: usher
+Age: 87
+Phone Number: 8975346523
+HashedPassword: BA4AFECD23BE0B3121EA708831022CEF
+

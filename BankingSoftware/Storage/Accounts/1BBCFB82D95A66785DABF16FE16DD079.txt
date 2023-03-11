@@ -1,0 +1,5 @@
+Last withdrawal amount: 50000
+Last withdrawal time: 3/3/2023 8:55:01 AM
+Last deposit amount: 80000
+Last deposit time: 3/3/2023 8:54:50 AM
+Total: $30000

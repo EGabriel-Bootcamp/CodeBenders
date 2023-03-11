@@ -1,0 +1,8 @@
+First Name: Hailey
+Last Name: Bieber
+Email: hailey@bieber.com
+Username: hailey
+Age: 78
+Phone Number: 8777345623
+HashedPassword: 588BE3DDB98C4DB0FB1E484105399596
+
